@@ -7,13 +7,13 @@ $(window).scroll(function() {
     }
 });
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
+//Page scroll on click function.
 $(function() {
     $(document).on('click', 'a.page-scroll, .navbar-toggle', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top- $('#header').outerHeight()
-        }, 1500, 'easeInOutExpo');
+        },500, 'easeInOutExpo');
         event.preventDefault();
     });
 });

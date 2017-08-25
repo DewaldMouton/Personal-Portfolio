@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Profile - Dewald Mouton</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="=width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Latest compiled and minified CSS -->
@@ -18,46 +19,69 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script src="https://use.fontawesome.com/f5a0c55ae1.js"></script>
-    <script src="js/script.js"></script>
-
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/stylesheet.css" />
-    <title>Profile - Dewald Mouton</title>
+
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
+<body>
+    <!--Main content div-->
+    <!-- <div class="contents" data-spy="scroll" data-target=".navbar" data-offset="100">
+        <div id="header" class="container-fluid"> -->
 
-    <div id="header" class="container-fluid">
-
-        <!--Span for nav panel-->
-        <div id="navbar" class="navbar navbar-default">
-            <div class="navMain navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+    <!--Span for nav panel-->
+    <!-- <div id="navbar" class="navbar navbar-default">
+                <div class="navMain navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-
                     </button>
-            </div>
+                </div> -->
 
-            <!--Hidden dropdown list-->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <!--Hidden dropdown list-->
+    <!-- <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="page-scroll" href="#containerMain">TO TOP</a></li>
+                        <li><a class="page-scroll" href="#aboutMe">ABOUT ME</a></li>
+                        <li><a class="page-scroll" href="#qualifications">QUALIFICATIONS</a></li>
+                        <li><a class="page-scroll" href="#skills">SKILLS</a></li>
+                        <li><a class="page-scroll" href="#goals">GOALS</a></li>
+                        <li><a class="page-scroll" href="#projects">PROJECTS</a></li>
+                        <li><a class="page-scroll" href="#contactMe">CONTACT ME</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+    <nav class="navbar navbar-dark bg-primary" id="nav2">
+        <div class="container-fluid">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                        ☰
+                    </button>
+            <a class="navbar-brand" href="#">Navbar sm</a>
+            <div class="collapse navbar-toggleable-sm" id="collapsingNavbar2">
                 <ul class="nav navbar-nav">
-                    <li><a class="page-scroll" href="#containerMain">TO TOP</a></li>
-                    <li><a class="page-scroll" href="#aboutMe">ABOUT ME</a></li>
-                    <li><a class="page-scroll" href="#qualifications">QUALIFICATIONS</a></li>
-                    <li><a class="page-scroll" href="#skills">SKILLS</a></li>
-                    <li><a class="page-scroll" href="#goals">GOALS</a></li>
-                    <li><a class="page-scroll" href="#projects">PROJECTS</a></li>
-                    <li><a class="page-scroll" href="#contactMe">CONTACT ME</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="I collapse on `sm` screens">About</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
+    <!--Info Panel-->
     <div class="containerMain container-fluid" id="containerMain">
         <h2 id="top">Hi, my name is Dewald Mouton, welcome to my profile.</h2>
         <img id="profilePic" src="images/profile.jpg">
@@ -87,7 +111,7 @@
             <div class="container container-fluid">
                 <h3>Qualifications...</h3>
 
-                <ul>
+                <ul class="image-list">
                     <li><img id="OCABadge" src="images/oracle_associate.png">Java SE7 OCA certified</li>
                 </ul>
                 <p>
@@ -126,32 +150,52 @@
         <section class="anchor" id="projects">
             <div class="container container-fluid">
                 <h3>Projects...</h3>
-                <p>
-                    Coming Soon...
-                </p>
+                <ul class="image-list">
+                    <li>
+                        <div class="project-box">
+                            <img id="young" src="images/Alien_World_Hex.png" />
+                            <div id="overlay">
+                                <a id="younglingslink" href="https://younglings-101.firebaseapp.com" target="_blank">Younglings101</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
-
-        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
         <!--Contact Me Panel-->
         <section class="anchor" id="contactMe">
             <div class="container container-fluid">
                 <h3>Contact Me...</h3>
-                <ul>
-                    <li>Cell: 081 409 3242</li>
-                    <li>Tell: 021 981 9347</li>
-                    <li>Email: moutondewald@gmail.com</li>
-                </ul>
-                <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light"
-                    data-vanity="dewald-mouton-925837145"><a class="LI-simple-link" href='https://za.linkedin.com/in/dewald-mouton-925837145?trk=profile-badge' target="_blank">Dewald Mouton</a></div>
-                <div id="gitbutton">
+
+                <!--email panel-->
+                <div id="email-panel">
+                    <a id="expand" type="button" class="btn btn-info page-scroll" data-toggle="collapse" data-target="#email" href="#email"><i class="fa fa-paper-plane"></i>
+                            Email me</a>
+                    <div id="email" class="collapse">
+                        <form id="#formspree" class="container-fluid" action="https://formspree.io/moutondewald@gmail.com" method="POST">
+                            <input class="formspree-content" id="form-message" type="email" name="_replyto" placeholder="Enter your email here...">
+                            <input class="formspree-content" id="form-text" type="text" name="name" placeholder="Enter your name here...">
+                            <input class="formspree-content" id="form-content" type="text" name="content" placeholder="Enter your message here...">
+                            <input class="formspree-content" id="form-submit" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+
+                <!--linkedin link-->
+                <div class="linking">
+                    <a id="linkedin" href="https://www.linkedin.com/in/dewald-mouton-925837145/?ppe=1" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                </div>
+                <!--github link-->
+                <div class="linking">
                     <a id="github" href="https://github.com/DewaldMouton" target="_blank"><i class="fa fa-github"></i> Github</a>
                 </div>
             </div>
         </section>
-    </div>
 
+    </div>
+    </div>
+    <!--Ending of contents-->
 </body>
 
 </html>
